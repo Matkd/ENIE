@@ -17,25 +17,52 @@
 
 <body>
 
-    <form id="form">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Juan Perez">
+  <div class="container">
+    <div class="row">
+      <div class="cabecera">
+        <H1 class="titulo">APP DE GASTOS</H1>
+        <h3 class="subtitulomkt">Porque cuentas claras conservan amigos.</h3>  
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="formulario">
+          <form id="form">
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Juan Perez">
+            </div>
+
+            <div class="mb-3">
+              <label for="gasto" class="form-label">Gasto</label>
+              <input type="number" min="0" step="0.1" class="form-control" id="gasto" placeholder="Cuanto gasto?">
+            </div>
+
+            <button type="submit" class="btn btn-primary boton">Cargar</button>
+          </form>
         </div>
+      </div>
 
-        <div class="mb-3">
-          <label for="gasto" class="form-label">Gasto</label>
-          <input type="number" min="0" step="0.1" class="form-control" id="gasto" placeholder="Cuanto gasto?">
+      <div class="col">
+        <div class="contenedorhistorial">
+          <div class="historial" id="historial"></div>
         </div>
+      </div>
 
-        <button type="submit" class="btn btn-primary">Cargar</button>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="promedio" id="promedio"></div>
+      </div>
+    </div>
+  </div>
 
-        <div id="historial"></div>
-        <div id="promedio"></div>
-
-    </form>
-
-    
+   <!--Sript-->
     <script src="js/script.js" async defer></script>
+    
 </body>
 </html>
